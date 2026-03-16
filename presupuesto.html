@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presupuesto piscina prefabricada — Piscinas Carbonell Valencia</title>
+  <meta name="description" content="Solicita presupuesto para tu piscina prefabricada de fibra en Valencia. Respuesta rápida y sin compromiso. Llama al 698 548 180." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Nunito', sans-serif; color: #1a202c; line-height: 1.7; overflow-x: hidden; }
+    img { max-width: 100%; display: block; } a { text-decoration: none; color: inherit; } ul { list-style: none; }
+    :root {
+      --primary: #10a0a5; --primary-dark: #0b7a7e; --primary-light: #e0f5f5;
+      --accent: #f59e0b; --dark: #0d3b3c;
+      --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+      --gray-600: #475569; --gray-800: #1e293b;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08); --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
+      --radius: 12px; --radius-lg: 20px; --transition: all 0.3s ease;
+    }
+    header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo img { height: 50px; } nav ul { display: flex; gap: 4px; }
+    nav a { padding: 8px 14px; border-radius: 8px; font-weight: 600; font-size: 0.88rem; color: var(--gray-800); transition: var(--transition); }
+    nav a:hover, nav a.active { color: var(--primary); background: var(--primary-light); }
+    .header-phone { background: var(--primary); color: white; padding: 10px 22px; border-radius: 50px; font-weight: 700; font-size: 0.88rem; transition: var(--transition); }
+    .header-phone:hover { background: var(--primary-dark); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--gray-800); margin: 5px 0; border-radius: 2px; }
+    .mobile-nav { display: none; position: fixed; top: 72px; left: 0; right: 0; background: white; padding: 20px 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); z-index: 999; }
+    .mobile-nav.open { display: block; }
+    .mobile-nav ul { display: flex; flex-direction: column; gap: 4px; }
+    .mobile-nav a { display: block; padding: 12px 16px; border-radius: 8px; font-weight: 600; color: var(--gray-800); transition: var(--transition); }
+    .mobile-nav a:hover { background: var(--primary-light); color: var(--primary); }
+    .mobile-nav .mobile-tel { display: block; margin-top: 16px; text-align: center; background: var(--primary); color: white; padding: 14px; border-radius: 12px; font-weight: 700; }
+    .page-hero { padding: 140px 24px 80px; background: linear-gradient(135deg, var(--dark), var(--primary)); color: white; text-align: center; }
+    .page-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 16px; }
+    .page-hero p { opacity: 0.88; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+    section { padding: 90px 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    /* FORM + CONTACT */
+    .presupuesto-inner { display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px; align-items: start; }
+    .form-card { background: white; border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-lg); }
+    .form-card h2 { font-size: 1.6rem; font-weight: 900; color: var(--gray-800); margin-bottom: 8px; }
+    .form-card p { color: var(--gray-600); margin-bottom: 32px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; font-size: 0.9rem; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 16px; border: 2px solid var(--gray-200); border-radius: var(--radius);
+      font-family: inherit; font-size: 0.95rem; color: var(--gray-800);
+      transition: var(--transition); background: var(--gray-50);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--primary); background: white; box-shadow: 0 0 0 3px rgba(16,160,165,0.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .btn-submit { width: 100%; padding: 16px; background: var(--primary); color: white; border: none; border-radius: 50px; font-family: inherit; font-weight: 800; font-size: 1.05rem; cursor: pointer; transition: var(--transition); }
+    .btn-submit:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(16,160,165,0.3); }
+    .form-note { text-align: center; color: var(--gray-600); font-size: 0.82rem; margin-top: 12px; }
+
+    /* CONTACT INFO */
+    .contact-info h3 { font-size: 1.3rem; font-weight: 900; color: var(--gray-800); margin-bottom: 24px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
+    .contact-icon { width: 52px; height: 52px; background: var(--primary-light); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+    .contact-item h4 { font-size: 0.85rem; font-weight: 700; color: var(--gray-600); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .contact-item p { color: var(--gray-800); font-weight: 600; line-height: 1.6; }
+    .contact-item a { color: var(--primary); }
+    .nota-box { background: var(--primary-light); border-radius: var(--radius-lg); padding: 20px; margin-top: 20px; }
+    .nota-box p { font-size: 0.88rem; color: var(--gray-600); line-height: 1.7; }
+
+    footer { background: var(--gray-800); color: rgba(255,255,255,0.75); padding: 40px 24px 24px; }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; font-size: 0.83rem; opacity: 0.5; flex-wrap: wrap; gap: 10px; }
+    @media (max-width: 900px) { .presupuesto-inner { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { section { padding: 60px 20px; } nav { display: none; } .header-phone { display: none; } .hamburger { display: block; } }
+    @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="inicio.html" class="logo"><img src="assets/logo.png" alt="Piscinas Carbonell"></a>
+      <nav><ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="precios-modelos.html">Precios y modelos</a></li>
+        <li><a href="instalacion.html">Instalación</a></li>
+        <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul></nav>
+      <a href="tel:698548180" class="header-phone">📞 698 548 180</a>
+      <button class="hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="inicio.html">Inicio</a></li><li><a href="precios-modelos.html">Precios y modelos</a></li>
+      <li><a href="instalacion.html">Instalación</a></li><li><a href="presupuesto.html">Presupuesto</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <a href="tel:698548180" class="mobile-tel">📞 698 548 180</a>
+  </div>
+
+  <div class="page-hero">
+    <h1>Solicitar presupuesto</h1>
+    <p>Cuéntanos lo que necesitas y te damos una respuesta rápida y sin compromiso.</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="presupuesto-inner">
+        <div class="form-card">
+          <h2>Solicitud de presupuesto</h2>
+          <p>Rellena el formulario y nos pondremos en contacto contigo a la mayor brevedad.</p>
+          <form action="contacto.html" method="GET">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono *</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="698 000 000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com">
+            </div>
+            <div class="form-group">
+              <label for="localidad">Localidad / Municipio *</label>
+              <input type="text" id="localidad" name="localidad" required placeholder="Valencia, Bétera, Paterna...">
+            </div>
+            <div class="form-group">
+              <label for="modelo">Modelo de interés</label>
+              <select id="modelo" name="modelo">
+                <option value="">Seleccionar modelo...</option>
+                <option value="dora2">Piscina Dora 2 — 6×3 m (en oferta)</option>
+                <option value="otro">Otro modelo / consultar catálogo</option>
+                <option value="sin-definir">Aún no lo sé, necesito asesoramiento</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Cuéntanos más (opcional)</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Dimensiones del terreno, si ya hay excavación hecha, consultas sobre accesorios..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar solicitud de presupuesto</button>
+            <p class="form-note">Sin compromiso. Te respondemos lo antes posible.</p>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <h3>O contáctanos directamente</h3>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Teléfono</h4>
+              <p><a href="tel:698548180">698 548 180</a><br><a href="tel:961314137">961 314 137</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Exposición</h4>
+              <p>C/Traginers nº 9<br>P.I. L'Horta Vella<br>46117 Bétera (Valencia)</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <h4>Visitas</h4>
+              <p>Concertar cita<br>telefónica previa</p>
+            </div>
+          </div>
+          <div class="nota-box">
+            <p>📦 <strong>Oferta disponible ahora:</strong> Piscina Dora 2 (6×3 m) por <strong>14.000€</strong> (IVA no incluido). Unidades limitadas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-bottom">
+      <span>© 2024 Piscinas Carbonell — Bétera (Valencia)</span>
+      <span>698 548 180 / 961 314 137</span>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('click', function(e) {
+      const nav = document.getElementById('mobileNav');
+      if (nav.classList.contains('open') && !nav.contains(e.target) && !e.target.closest('.hamburger')) nav.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — Piscinas Carbonell Bétera Valencia</title>
+  <meta name="description" content="Contacta con Piscinas Carbonell en Bétera (Valencia). Teléfonos: 698 548 180 / 961 314 137. C/Traginers nº 9, P.I. L'Horta Vella." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Nunito', sans-serif; color: #1a202c; line-height: 1.7; overflow-x: hidden; }
+    img { max-width: 100%; display: block; } a { text-decoration: none; color: inherit; } ul { list-style: none; }
+    :root {
+      --primary: #10a0a5; --primary-dark: #0b7a7e; --primary-light: #e0f5f5;
+      --accent: #f59e0b; --dark: #0d3b3c;
+      --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+      --gray-600: #475569; --gray-800: #1e293b;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08); --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
+      --radius: 12px; --radius-lg: 20px; --transition: all 0.3s ease;
+    }
+    header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo img { height: 50px; } nav ul { display: flex; gap: 4px; }
+    nav a { padding: 8px 14px; border-radius: 8px; font-weight: 600; font-size: 0.88rem; color: var(--gray-800); transition: var(--transition); }
+    nav a:hover, nav a.active { color: var(--primary); background: var(--primary-light); }
+    .header-phone { background: var(--primary); color: white; padding: 10px 22px; border-radius: 50px; font-weight: 700; font-size: 0.88rem; transition: var(--transition); }
+    .header-phone:hover { background: var(--primary-dark); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--gray-800); margin: 5px 0; border-radius: 2px; }
+    .mobile-nav { display: none; position: fixed; top: 72px; left: 0; right: 0; background: white; padding: 20px 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); z-index: 999; }
+    .mobile-nav.open { display: block; }
+    .mobile-nav ul { display: flex; flex-direction: column; gap: 4px; }
+    .mobile-nav a { display: block; padding: 12px 16px; border-radius: 8px; font-weight: 600; color: var(--gray-800); transition: var(--transition); }
+    .mobile-nav a:hover { background: var(--primary-light); color: var(--primary); }
+    .mobile-nav .mobile-tel { display: block; margin-top: 16px; text-align: center; background: var(--primary); color: white; padding: 14px; border-radius: 12px; font-weight: 700; }
+    .page-hero { padding: 140px 24px 80px; background: linear-gradient(135deg, var(--dark), var(--primary)); color: white; text-align: center; }
+    .page-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 16px; }
+    .page-hero p { opacity: 0.88; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+    section { padding: 90px 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    /* CONTACTO GRID */
+    .contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+    .contact-card { background: white; border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow); text-align: center; transition: var(--transition); }
+    .contact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .contact-card .big-icon { font-size: 3rem; margin-bottom: 16px; }
+    .contact-card h3 { font-size: 1.15rem; font-weight: 900; color: var(--gray-800); margin-bottom: 10px; }
+    .contact-card p { color: var(--gray-600); line-height: 1.7; }
+    .contact-card a { color: var(--primary); font-weight: 700; font-size: 1.1rem; display: block; margin-top: 12px; }
+    .contact-card a:hover { color: var(--primary-dark); }
+
+    /* DIRECCIÓN + MAPA */
+    .direccion { background: var(--gray-50); }
+    .direccion-inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; align-items: start; }
+    .direccion-text h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 900; color: var(--gray-800); margin-bottom: 20px; }
+    .dir-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+    .dir-icon { width: 44px; height: 44px; background: var(--primary-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .dir-item h4 { font-size: 0.82rem; font-weight: 700; color: var(--gray-600); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 3px; }
+    .dir-item p { color: var(--gray-800); font-weight: 600; line-height: 1.5; }
+    .dir-item a { color: var(--primary); }
+    .mapa-wrap { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); height: 380px; background: var(--gray-200); display: flex; align-items: center; justify-content: center; }
+    .mapa-wrap iframe { width: 100%; height: 100%; border: none; }
+
+    footer { background: var(--gray-800); color: rgba(255,255,255,0.75); padding: 50px 24px 24px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 40px; margin-bottom: 36px; max-width: 1200px; margin-left: auto; margin-right: auto; }
+    .footer-logo img { height: 44px; margin-bottom: 14px; filter: brightness(0) invert(1) opacity(0.9); }
+    .footer-logo p { font-size: 0.88rem; line-height: 1.8; opacity: 0.65; }
+    .footer-col h4 { color: white; font-weight: 800; margin-bottom: 16px; font-size: 0.9rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { font-size: 0.88rem; opacity: 0.7; transition: var(--transition); }
+    .footer-col a:hover { opacity: 1; color: #7fe8eb; padding-left: 4px; }
+    .footer-contact p { font-size: 0.88rem; line-height: 1.9; opacity: 0.7; }
+    .footer-contact strong { color: white; }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px; display: flex; justify-content: space-between; font-size: 0.83rem; opacity: 0.5; flex-wrap: wrap; gap: 10px; }
+
+    @media (max-width: 900px) { .contacto-grid { grid-template-columns: 1fr; } .direccion-inner { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; gap: 24px; } }
+    @media (max-width: 768px) { section { padding: 60px 20px; } nav { display: none; } .header-phone { display: none; } .hamburger { display: block; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="inicio.html" class="logo"><img src="assets/logo.png" alt="Piscinas Carbonell"></a>
+      <nav><ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="precios-modelos.html">Precios y modelos</a></li>
+        <li><a href="instalacion.html">Instalación</a></li>
+        <li><a href="presupuesto.html">Presupuesto</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul></nav>
+      <a href="tel:698548180" class="header-phone">📞 698 548 180</a>
+      <button class="hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="inicio.html">Inicio</a></li><li><a href="precios-modelos.html">Precios y modelos</a></li>
+      <li><a href="instalacion.html">Instalación</a></li><li><a href="presupuesto.html">Presupuesto</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <a href="tel:698548180" class="mobile-tel">📞 698 548 180</a>
+  </div>
+
+  <div class="page-hero">
+    <h1>Contacto</h1>
+    <p>Estamos en Bétera (Valencia). Llámanos o visita nuestra exposición con cita previa.</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="contacto-grid">
+        <div class="contact-card">
+          <div class="big-icon">📞</div>
+          <h3>Llámanos</h3>
+          <p>La forma más rápida de contactar. Te atendemos y respondemos todas tus dudas.</p>
+          <a href="tel:698548180">698 548 180</a>
+          <a href="tel:961314137">961 314 137</a>
+        </div>
+        <div class="contact-card">
+          <div class="big-icon">📋</div>
+          <h3>Solicita presupuesto</h3>
+          <p>Rellena el formulario de presupuesto y te respondemos a la mayor brevedad posible.</p>
+          <a href="presupuesto.html" style="background: var(--primary); color: white; padding: 12px 28px; border-radius: 50px; font-size: 0.95rem; display: inline-block; margin-top: 8px;">Ir al formulario →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="direccion">
+    <div class="container">
+      <div class="direccion-inner">
+        <div class="direccion-text">
+          <h2>Exposición y oficinas</h2>
+          <p style="color: var(--gray-600); margin-bottom: 28px;">Visítanos con cita telefónica previa. Podrás ver los modelos disponibles y recibir asesoramiento personalizado.</p>
+          <div class="dir-item">
+            <div class="dir-icon">📍</div>
+            <div>
+              <h4>Dirección</h4>
+              <p>C/Traginers nº 9 (antes C/Dos nº 9)<br>P.I. L'Horta Vella<br>46117 Bétera (Valencia) España</p>
+            </div>
+          </div>
+          <div class="dir-item">
+            <div class="dir-icon">📞</div>
+            <div>
+              <h4>Teléfonos</h4>
+              <p><a href="tel:698548180">698 548 180</a><br><a href="tel:961314137">961 314 137</a></p>
+            </div>
+          </div>
+          <div class="dir-item">
+            <div class="dir-icon">📅</div>
+            <div>
+              <h4>Visitas</h4>
+              <p>Concertar cita telefónica previa</p>
+            </div>
+          </div>
+        </div>
+        <div class="mapa-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3076.0!2d-0.430!3d39.590!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDM1JzI0LjAiTiAwwrAyNSc0OC4wIlc!5e0!3m2!1ses!2ses!4v1"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación Piscinas Carbonell Bétera Valencia">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="assets/logo.png" alt="Piscinas Carbonell">
+        <p>Instalación de piscinas prefabricadas de fibra Coinpol en Valencia. Más de 20 años de experiencia en Bétera y toda la provincia.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="precios-modelos.html">Precios y modelos</a></li>
+          <li><a href="instalacion.html">Instalación</a></li>
+          <li><a href="presupuesto.html">Presupuesto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact footer-col">
+        <h4>Contacto</h4>
+        <p><strong>Telf.:</strong> 698 548 180<br><strong>Telf.:</strong> 961 314 137</p>
+        <p><strong>Dirección:</strong><br>C/Traginers nº 9, P.I. L'Horta Vella<br>46117 Bétera (Valencia)</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Piscinas Carbonell — Todos los derechos reservados</span>
+      <span>Bétera (Valencia) — España</span>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('click', function(e) {
+      const nav = document.getElementById('mobileNav');
+      if (nav.classList.contains('open') && !nav.contains(e.target) && !e.target.closest('.hamburger')) nav.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
